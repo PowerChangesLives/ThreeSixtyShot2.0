@@ -917,6 +917,9 @@ why_section ul.list li:before{
     cursor: pointer;
     -webkit-box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
     box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
+    height: 100%;
+    justify-content: center;
+    flex: 1;
 }
 .service_box i{
     font-size: 50px;
@@ -1301,7 +1304,7 @@ select.form-control:not([size]):not([multiple]){
    Call To Action Section
    ========================================================================== */
 .cta_section{
-    background-image: url(../img/cta.jpg);
+    background-image: url(https://github.com/PowerChangesLives/ThreeSixtyShot/blob/all_team_branch/images/Red%20Carpet%20CTA.jpeg?raw=true);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 0 0;
@@ -2099,7 +2102,7 @@ blockquote span{
    ========================================================================== */
 /*Page Header */
 .page_header{
-    background-image: url(../img/page-header.jpg);
+    background-image: url(https://github.com/PowerChangesLives/ThreeSixtyShot/blob/all_team_branch/images/special-event-hero.jpeg?raw=true);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
