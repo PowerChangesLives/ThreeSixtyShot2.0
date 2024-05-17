@@ -1,0 +1,778 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Barbershop || Template Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+    .added1 {	background-color: #336600;
+	color: #FFFFFF;
+}
+    </style>
+
+	<!-- Syntax Highlighter -->
+	<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shCore.css" media="all">
+	<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shThemeDefault.css" media="all">
+</head>
+
+
+<body>
+	<div class="container">
+
+		<h3 class="center alt">&ldquo;Barbershop&rdquo; Documentation by &ldquo;DynamicLayers&rdquo; v1.0</h3>
+
+		<hr>
+
+		<h1 class="center">&ldquo;Barbershop&rdquo;</h1>
+
+        <div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+			  <p class="prepend-top">
+<strong>
+					Created:01/01/2018<br>
+				By: <a href="http://www.DynamicLayers.net">DynamicLayers</a><br>
+				<br>
+			    </strong><strong><br>
+		        </strong></p>
+    </div><!-- end div .span-6 -->
+
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing our theme. If you have any questions that are beyond the scope of this help file, please contact our support. Thanks so much!</p>
+	</div>
+	  </div><!-- end div .borderTop -->
+
+		<hr>
+
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#temp-components">Template Components</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+
+			<li><a href="#php">PHP Code Explanation</a> <em class="quiet small">(If your theme uses PHP)</em></li>
+			<li><a href="#">Flash</a>  <em class="quiet small">(If your theme uses Flash)</em></li>
+			<li><a href="#">API Usage</a> <em class="quiet small">(If your theme uses an API)</em></li>
+			<li><a href="#">Any additional unique features that need an overview</a></li>
+		</ol>
+
+		<hr>
+
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>Below is the general HTML structure of the landing page.<br>
+		</p>
+
+
+	  <h4 id="front-html-structures"><strong>1) index.html File Structure</strong> - <a href="#toc">top</a></h4>
+
+      <p>The template page's layout consist of top that show the logo and main menu, hero section  that show background image, beforecontent that show some amaizing content,  about section contain about your some info & feature, service section contained all services, work section you can showcase your portfolio with awesome animation, skills section here you can add some skills, team section is for your team members, testimonial section here you can published your customer reviews, call to action this for call to action content, contact section here you can put your contact information & footer that show copyright information.</p>
+
+<pre class="brush: html;" id="front-html-structure-pre">
+&lt;!doctype html>
+&lt;!--[if lt IE 7]>      &lt;html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> &lt;![endif]-->
+&lt;!--[if IE 7]>         &lt;html class="no-js lt-ie9 lt-ie8" lang=""> &lt;![endif]-->
+&lt;!--[if IE 8]>         &lt;html class="no-js lt-ie9" lang=""> &lt;![endif]-->
+&lt;!--[if gt IE 8]>&lt;!--> &lt;html class="no-js" lang="en"> &lt;!--&lt;![endif]-->
+    &lt;head>
+        &lt;meta charset="utf-8">
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+		&lt;meta name="description" content="">
+        &lt;meta name="author" content="DynamicLayers">
+
+        &lt;title>Barber Shop || Home&lt;/title>
+
+		&lt;link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+        &lt;!-- Elegant Font Icons CSS -->
+        &lt;link rel="stylesheet" href="css/elegant-font-icons.css">
+        &lt;!-- Elegant Line Icons CSS -->
+        &lt;link rel="stylesheet" href="css/elegant-line-icons.css">
+        &lt;!-- Themify Icon CSS -->
+        &lt;link rel="stylesheet" href="css/themify-icons.css">
+		&lt;!-- Bootstrap CSS -->
+        &lt;link rel="stylesheet" href="css/bootstrap.min.css">
+        &lt;!-- animate CSS -->
+        &lt;link rel="stylesheet" href="css/animate.min.css">
+		&lt;!-- Venobox CSS -->
+        &lt;link rel="stylesheet" href="css/venobox/venobox.css">
+		&lt;!-- OWL-Carousel CSS -->
+        &lt;link rel="stylesheet" href="css/owl.carousel.css">
+        &lt;!-- Slick Nav CSS -->
+        &lt;link rel="stylesheet" href="css/slicknav.min.css">
+		&lt;!-- Main CSS -->
+        &lt;link rel="stylesheet" href="css/main.css">
+		&lt;!-- Responsive CSS -->
+        &lt;link rel="stylesheet" href="css/responsive.css">
+
+        &lt;script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js">&lt;/script>
+    &lt;/head>
+    &lt;body>
+        &lt;!--[if lt IE 8]>
+            &lt;p class="browserupgrade">You are using an &lt;strong>outdated&lt;/strong> browser. Please &lt;a href="http://browsehappy.com/">upgrade your browser&lt;/a> to improve your experience.&lt;/p>
+        &lt;![endif]-->
+
+        &lt;div id='preloader' >
+            &lt;div class='loader' >
+                &lt;img src="img/loading.gif" width="80" alt="">
+            &lt;/div>
+        &lt;/div>&lt;!-- Preloader -->
+
+        &lt;header id="header" class="header_section">
+			&lt;nav class="navbar">
+				&lt;div class="container">
+					&lt;div class="navbar-header">
+						&lt;img src="img/logo.png" alt="Logo">
+					&lt;/div>
+					&lt;div id="navbar" class="navbar-right">
+						&lt;ul id="mainmenu" class="nav navbar-nav nav-menu">
+                            &lt;li class="active">&lt;a href="index.html">Home &lt;span class="sr-only">(current)&lt;/span>&lt;/a>
+                                &lt;ul>
+                                   &lt;li>&lt;a href="index.html">Home 01&lt;/a>&lt;/li>
+                                   &lt;li>&lt;a href="index-2.html">Home 02&lt;/a>&lt;/li>
+                                   &lt;li>&lt;a href="index-3.html">Home 03&lt;/a>&lt;/li>
+                                &lt;/ul>
+                            &lt;/li>
+							&lt;li> &lt;a href="about.html">About&lt;/a>
+                                &lt;ul>
+                                   &lt;li>&lt;a href="about.html">About&lt;/a>&lt;/li>
+                                   &lt;li>&lt;a href="about-2.html">About 02&lt;/a>&lt;/li>
+                                &lt;/ul>
+                            &lt;/li>
+							&lt;li> &lt;a href="services.html">Services&lt;/a>
+                                &lt;ul>
+                                   &lt;li>&lt;a href="services.html">Service&lt;/a>&lt;/li>
+                                   &lt;li>&lt;a href="services-2.html">Service 02&lt;/a>&lt;/li>
+                                &lt;/ul>
+                            &lt;/li>
+                            &lt;li> &lt;a href="appointment.html">Appointment&lt;/a>
+                                &lt;ul>
+                                   &lt;li>&lt;a href="appointment.html">Appointment&lt;/a>&lt;/li>
+                                   &lt;li>&lt;a href="appointment-2.html">Appointment 02&lt;/a>&lt;/li>
+                                &lt;/ul>
+                            &lt;/li>
+                            &lt;li> &lt;a href="#">Pages&lt;/a>
+                                &lt;ul>
+                                   &lt;li>&lt;a href="gallery.html">Gallery&lt;/a>&lt;/li>
+                                   &lt;li>&lt;a href="team.html">Team&lt;/a>&lt;/li>
+                                   &lt;li>&lt;a href="pricing.html">Pricing&lt;/a>&lt;/li>
+                                   &lt;li>&lt;a href="404.html">404 Not Found&lt;/a>&lt;/li>
+                                &lt;/ul>
+                            &lt;/li>
+							&lt;li>&lt;a href="blog-grid.html">News&lt;/a>
+								&lt;ul>
+									&lt;li>&lt;a href="blog-grid.html">News Grid&lt;/a>&lt;/li>
+									&lt;li>&lt;a href="blog-sidebar.html">News Sidebar&lt;/a>&lt;/li>
+									&lt;li>&lt;a href="blog-details.html">News Details&lt;/a>&lt;/li>
+								&lt;/ul>
+							&lt;/li>
+							&lt;li>&lt;a href="contact.html">Contact&lt;/a>&lt;/li>
+                        &lt;/ul>
+					&lt;/div>&lt;!--/.navbar-collapse -->
+				&lt;/div>
+			&lt;/nav>&lt;!-- Navigation Bar -->
+		&lt;/header> &lt;!-- Header_Section -->
+
+		&lt;section class="slider_section">
+
+        &lt;/section>&lt;!-- /.slider_section -->
+
+        &lt;section id="about" class="about_section bd-bottom padding">
+
+        &lt;/section> &lt;!--/.about_section -->
+
+        &lt;section class="service_section bg-grey bd-bottom padding">
+
+        &lt;/section>&lt;!--/.service_section -->
+
+        &lt;section class="book_section padding">
+
+        &lt;/section>&lt;!--/.book_section -->
+
+        &lt;section id="team" class="team_section bd-bottom padding">
+
+        &lt;/section>&lt;!-- /.team_section -->
+
+        &lt;section id="reviews" class="testimonial_section padding">
+
+		&lt;/section>&lt;!-- /.testimonial_section -->
+
+       &lt;section class="pricing_section bg-grey bd-bottom padding">
+
+       &lt;/section>&lt;!-- /.pricing_section -->
+
+       &lt;section class="cta_section padding">
+
+       &lt;/section>&lt;!-- /.cta_section -->
+
+        &lt;section id="news" class="blog_section bd-bottom padding">
+
+        &lt;/section>&lt;!-- /.blog_section -->
+
+        &lt;div class="sponsor_section bg-grey">
+
+        &lt;/div>&lt;!-- ./sponsor_section -->
+
+		&lt;section id="subscribe" class="widget_section padding">
+
+		&lt;/section>&lt;!-- /.widget_section -->
+
+        &lt;footer class="footer_section">
+
+		&lt;/footer>&lt;!-- /.footer_section -->
+
+		&lt;a data-scroll href="#header" id="scroll-to-top">&lt;i class="arrow_up">&lt;/i>&lt;/a>
+
+		&lt;!-- jQuery Lib -->
+		&lt;script src="js/vendor/jquery-1.12.4.min.js">&lt;/script>
+		&lt;!-- Bootstrap JS -->
+		&lt;script src="js/vendor/bootstrap.min.js">&lt;/script>
+        &lt;!-- Imagesloaded JS -->
+        &lt;script src="js/vendor/imagesloaded.pkgd.min.js">&lt;/script>
+		&lt;!-- OWL-Carousel JS -->
+		&lt;script src="js/vendor/owl.carousel.min.js">&lt;/script>
+		&lt;!-- isotope JS -->
+		&lt;script src="js/vendor/jquery.isotope.v3.0.2.js">&lt;/script>
+		&lt;!-- Smooth Scroll JS -->
+		&lt;script src="js/vendor/smooth-scroll.min.js">&lt;/script>
+		&lt;!-- venobox JS -->
+		&lt;script src="js/vendor/venobox.min.js">&lt;/script>
+        &lt;!-- ajaxchimp JS -->
+        &lt;script src="js/vendor/jquery.ajaxchimp.min.js">&lt;/script>
+        &lt;!-- Slick Nav JS -->
+        &lt;script src="js/vendor/jquery.slicknav.min.js">&lt;/script>
+        &lt;!-- YTPlayer JS -->
+	    &lt;script src="js/vendor/jquery.mb.YTPlayer.min.js">&lt;/script>
+		&lt;!-- Contact JS -->
+		&lt;script src="js/contact.js">&lt;/script>
+		&lt;!-- Appointment JS -->
+		&lt;script src="js/appointment.js">&lt;/script>
+		&lt;!-- Main JS -->
+		&lt;script src="js/main.js">&lt;/script>
+
+    &lt;/body>
+&lt;/html>
+        </pre>
+       <hr>
+
+
+		<h3 id="temp-components"><strong>B) Template Components</strong> - <a href="#toc">top</a></h3>
+		<p>The site is made of many sections like header, slider, testimonials, services and more...</p>
+
+<h4 id="slider"><strong>1) Header Section</strong> - <a href="#toc">top</a></h4>
+
+
+<pre class="brush: html;">
+&lt;header id="header" class="header_section">
+	&lt;nav class="navbar">
+		&lt;div class="container">
+			&lt;div class="navbar-header">
+				&lt;img src="img/logo.png" alt="Logo">
+			&lt;/div>
+			&lt;div id="navbar" class="navbar-right">
+				&lt;ul id="mainmenu" class="nav navbar-nav nav-menu">
+					&lt;li class="active">&lt;a href="index.html">Home &lt;span class="sr-only">(current)&lt;/span>&lt;/a>
+						&lt;ul>
+						   &lt;li>&lt;a href="index.html">Home 01&lt;/a>&lt;/li>
+						   &lt;li>&lt;a href="index-2.html">Home 02&lt;/a>&lt;/li>
+						   &lt;li>&lt;a href="index-3.html">Home 03&lt;/a>&lt;/li>
+						&lt;/ul>
+					&lt;/li>
+					&lt;li> &lt;a href="about.html">About&lt;/a>
+						&lt;ul>
+						   &lt;li>&lt;a href="about.html">About&lt;/a>&lt;/li>
+						   &lt;li>&lt;a href="about-2.html">About 02&lt;/a>&lt;/li>
+						&lt;/ul>
+					&lt;/li>
+					&lt;li> &lt;a href="services.html">Services&lt;/a>
+						&lt;ul>
+						   &lt;li>&lt;a href="services.html">Service&lt;/a>&lt;/li>
+						   &lt;li>&lt;a href="services-2.html">Service 02&lt;/a>&lt;/li>
+						&lt;/ul>
+					&lt;/li>
+					&lt;li> &lt;a href="appointment.html">Appointment&lt;/a>
+						&lt;ul>
+						   &lt;li>&lt;a href="appointment.html">Appointment&lt;/a>&lt;/li>
+						   &lt;li>&lt;a href="appointment-2.html">Appointment 02&lt;/a>&lt;/li>
+						&lt;/ul>
+					&lt;/li>
+					&lt;li> &lt;a href="#">Pages&lt;/a>
+						&lt;ul>
+						   &lt;li>&lt;a href="gallery.html">Gallery&lt;/a>&lt;/li>
+						   &lt;li>&lt;a href="team.html">Team&lt;/a>&lt;/li>
+						   &lt;li>&lt;a href="pricing.html">Pricing&lt;/a>&lt;/li>
+						   &lt;li>&lt;a href="404.html">404 Not Found&lt;/a>&lt;/li>
+						&lt;/ul>
+					&lt;/li>
+					&lt;li>&lt;a href="blog-grid.html">News&lt;/a>
+						&lt;ul>
+							&lt;li>&lt;a href="blog-grid.html">News Grid&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="blog-sidebar.html">News Sidebar&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="blog-details.html">News Details&lt;/a>&lt;/li>
+						&lt;/ul>
+					&lt;/li>
+					&lt;li>&lt;a href="contact.html">Contact&lt;/a>&lt;/li>
+				&lt;/ul>
+			&lt;/div>&lt;!--/.navbar-collapse -->
+		&lt;/div>
+	&lt;/nav>&lt;!-- Navigation Bar -->
+&lt;/header> &lt;!-- Header_Section -->
+</pre>
+
+
+	  <hr>
+<h4 id="portfolio"><strong>2) Slider Section</strong> - <a href="#toc">top</a></h4>
+  <br>
+<pre class="brush: html;">
+&lt;section class="slider_section">
+	&lt;ul id="main-slider" class="owl-carousel main_slider">
+		&lt;li class="main_slide" style="background-image: url(img/slide-1.jpg);">
+			&lt;div class="container">
+				&lt;div class="display-table">
+					&lt;div class="table-cell">
+						&lt;div class="slider_content">
+							&lt;h3 class="text-white">Its Not Just a Haircut, Its an Experience.&lt;/h3>
+							&lt;h1 class="text-white">Where Mens Want  &lt;br>To Look There Very Best.&lt;/h1>
+							&lt;p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. &lt;br> It has survived not only five centuries.&lt;/p>
+							&lt;div class="btn_group">
+								&lt;a href="#" class="default_btn">Packages&lt;/a>
+								&lt;a href="#" class="default_btn">Book Now&lt;/a>
+							&lt;/div>
+						&lt;/div>
+					&lt;/div>
+				&lt;/div>
+			&lt;/div>
+		&lt;/li>
+	&lt;/ul>
+&lt;/section>&lt;!-- /.slider_section -->
+</pre>
+
+<hr>
+
+<h4 id="portfolio"><strong>3) About Section</strong> - <a href="#toc">top</a></h4>
+  <br>
+<pre class="brush: html;">
+&lt;section id="about" class="about_section bd-bottom padding">
+	&lt;div class="container">
+		&lt;div class="col-sm-6">
+			&lt;div class="about_content align-center">
+				&lt;h3 class="mb-15">Introducing&lt;/h3>
+				&lt;h2 class="mb-15">The Barber Shop Science 1991&lt;/h2>
+				&lt;img class="mb-20" src="img/about-logo.png" alt="logo">
+				&lt;p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/p>
+				&lt;a href="#" class="default_btn">More About Us&lt;/a>
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="col-sm-6 hidden-xs">
+			&lt;div class="about_img">
+				&lt;img src="img/about-1.jpg" alt="idea-images" class="about_img_1">
+				&lt;img src="img/about-2.jpg" alt="idea-images" class="about_img_2">
+				&lt;img src="img/about-3.jpg" alt="idea-images" class="about_img_3">
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/section> &lt;!--/.about_section -->
+</pre>
+
+<br>
+
+<hr>
+
+<h4 id="portfolio"><strong>3) Service Section</strong> - <a href="#toc">top</a></h4>
+  <br>
+<pre class="brush: html;">
+&lt;section class="service_section bg-grey bd-bottom padding">
+	&lt;div class="container">
+	   &lt;div class="section_heading align-center mb-40">
+		   &lt;h2>Our Barber Services&lt;/h2>
+		   &lt;p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;br>It has survived not only five centuries.&lt;/p>
+	   &lt;/div>
+		&lt;div class="col-sm-3 col-xs-6 xs-padding">
+		   &lt;div class="service_content align-center">
+				&lt;img src="img/service-1.jpg" alt="Services">
+				&lt;h3>Haircut Styles&lt;/h3>
+				&lt;P>Lorem Ipsum is simply dummy&lt;br> and typesetting industry.&lt;/P>
+		   &lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/section>&lt;!--/.service_section -->
+</pre>
+
+<br>
+
+<hr />
+
+<h4 id="portfolio"><strong>4) Book Section</strong> - <a href="#toc">top</a></h4>
+  <br>
+<pre class="brush: html;">
+&lt;section class="book_section padding">
+	&lt;div class="container">
+		&lt;div class="col-sm-6">
+		   &lt;div class="book_content">
+			   &lt;h2>Make An Appointment&lt;/h2>
+				&lt;p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;br>It has survived not only five centuries.&lt;/p>
+		   &lt;/div>
+		&lt;/div>
+		&lt;div class="col-sm-6">
+			&lt;div class="book_form">
+				&lt;div class="section_heading mb-40">
+					&lt;h2>Appointment Now&lt;/h2>
+					&lt;p>Lorem Ipsum is simply dummy text of the printing and industry.&lt;br>It has survived not only five centuries.&lt;/p>
+				&lt;/div>
+				&lt;form action="appointment.php" method="post" id="appointment_form" class="form-horizontal">
+					&lt;div class="form-group">
+						&lt;div class="col-xs-6">
+							&lt;input type="text" id="app_name" name="app_name" class="form-control" placeholder="Name" required>
+						&lt;/div>
+						&lt;div class="col-xs-6">
+							&lt;input type="email" id="app_email" name="app_email" class="form-control" placeholder="Your Email" required>
+						&lt;/div>
+					&lt;/div>
+					&lt;div class="form-group">
+						&lt;div class="col-xs-6">
+							&lt;input type="text" id="app_phone" name="app_phone" class="form-control" placeholder="Your Phone No" required>
+						&lt;/div>
+						&lt;div class="col-xs-6">
+							&lt;input type="text" id="app_free_time" name="app_free_time" class="form-control" placeholder="Your Free Time" required>
+						&lt;/div>
+					&lt;/div>
+					&lt;div class="form-group">
+						&lt;div class="col-xs-6">
+							&lt;select class="form-control" id="app_services" name="app_services">
+							  &lt;option>Services&lt;/option>
+							  &lt;option>Hair Styling&lt;/option>
+							  &lt;option>Shaving&lt;/option>
+							  &lt;option>Face Mask&lt;/option>
+							  &lt;option>Hair Wash&lt;/option>
+							  &lt;option>Beard Triming&lt;/option>
+							&lt;/select>
+						&lt;/div>
+						&lt;div class="col-xs-6">
+							&lt;select class="form-control" id="app_barbers" name="app_barbers">
+							  &lt;option>Choose Barbers&lt;/option>
+							  &lt;option>Michel Brown&lt;/option>
+							  &lt;option>Jonathan Smith&lt;/option>
+							  &lt;option>Jack Tosan&lt;/option>
+							  &lt;option>Martin Lane&lt;/option>
+							&lt;/select>
+						&lt;/div>
+					&lt;/div>
+					&lt;button id="app_submit" class="default_btn" type="submit">Book Now&lt;/button>
+					&lt;div id="msg-status" class="alert" role="alert">&lt;/div>
+				&lt;/form>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/section>&lt;!--/.book_section -->
+</pre>
+
+<br>
+
+<hr />
+
+<h4 id="portfolio"><strong>5) Team Section</strong> - <a href="#toc">top</a></h4>
+  <br>
+<pre class="brush: html;">
+&lt;section id="team" class="team_section bd-bottom padding">
+	&lt;div class="container">
+		&lt;div class="section_heading align-center mb-40">
+			&lt;h2>Our Barbers&lt;/h2>
+			&lt;p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;br>It has survived not only five centuries.&lt;/p>
+		&lt;/div>&lt;!-- /.section_heading -->
+		&lt;ul class="team_members">
+			&lt;li class="col-md-3 col-xs-6">
+				&lt;div class="team_member">
+					&lt;img src="img/team-1.jpg" alt="Team Member">
+					&lt;div class="overlay">
+						&lt;h3>JONATHAN SMITH&lt;/h3>
+						&lt;p>WEB DESIGNER&lt;/p>
+					&lt;/div>
+				&lt;/div>
+			&lt;/li>
+		&lt;/ul>&lt;!-- /.team_members -->
+	&lt;/div>
+&lt;/section>&lt;!-- /.team_section -->
+</pre>
+
+<br>
+
+<hr />
+
+<h4 id="portfolio"><strong>6) Testimonial Section</strong> - <a href="#toc">top</a></h4>
+  <br>
+<pre class="brush: html;">
+&lt;section id="reviews" class="testimonial_section padding">
+	&lt;div class="container">
+		&lt;ul id="testimonial_carousel" class="testimonial_items owl-carousel">
+			&lt;li class="testimonial_item">
+				&lt;p>"There are design companies, and then there are user experience design interface design&lt;br> professional. By far one of the worlds best known brands."&lt;/p>
+				&lt;h4 class="text-white">Anita Tran, IT Solutions.&lt;/h4>
+			&lt;/li>
+		&lt;/ul>
+	&lt;/div>
+&lt;/section>&lt;!-- /.testimonial_section -->
+</pre>
+
+<br>
+
+<hr />
+
+<h4 id="portfolio"><strong>7) Pricing Section</strong> - <a href="#toc">top</a></h4>
+  <br>
+<pre class="brush: html;">
+&lt;section class="pricing_section bg-grey bd-bottom padding">
+   &lt;div class="container">
+	 &lt;div class="section_heading align-center mb-40">
+			&lt;h2>Barber Pricing&lt;/h2>
+			&lt;p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;br>It has survived not only five centuries.&lt;/p>
+		&lt;/div>&lt;!-- /.section_heading -->
+		&lt;div class="col-sm-4 xs-padding">
+			&lt;div class="price_wrap">
+				&lt;h3>Hair Styling&lt;/h3>
+				&lt;ul class="price_list">
+					&lt;li>
+						&lt;h4>Hair Cut&lt;/h4>
+						&lt;p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p>
+						&lt;span class="price">$8&lt;/span>
+					&lt;/li>
+					&lt;li>
+						&lt;h4>Hair Styling&lt;/h4>
+						&lt;p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p>
+						&lt;span class="price">$9&lt;/span>
+					&lt;/li>
+					&lt;li>
+						&lt;h4>Hair Triming&lt;/h4>
+						&lt;p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p>
+						&lt;span class="price">$10&lt;/span>
+					&lt;/li>
+				&lt;/ul>
+			&lt;/div>
+		&lt;/div>
+   &lt;/div>
+&lt;/section>&lt;!-- /.pricing_section -->
+</pre>
+
+<hr />
+
+
+<h4 id="portfolio"><strong>7) Call To Action Section</strong> - <a href="#toc">top</a></h4>
+  <br>
+<pre class="brush: html;">
+&lt;section class="cta_section padding">
+   &lt;div class="container">
+	   &lt;div class="display-table">
+		   &lt;div class="table-cel">
+			   &lt;div class="cta_content align-center">
+				   &lt;h2>Making You Look Good &lt;br> Is In Our Haritage.&lt;/h2>
+				   &lt;p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;br>It has survived not only five centuries.&lt;/p>
+			   &lt;/div>
+		   &lt;/div>
+	   &lt;/div>
+   &lt;/div>
+&lt;/section>&lt;!-- /.cta_section -->
+</pre>
+
+<hr />
+
+
+<h4 id="portfolio"><strong>7) Blog Section</strong> - <a href="#toc">top</a></h4>
+  <br>
+<pre class="brush: html;">
+&lt;section id="news" class="blog_section bd-bottom padding">
+	&lt;div class="container">
+		&lt;div class="section_heading align-center mb-40">
+			&lt;h2>Latest Blog Posts&lt;/h2>
+			&lt;p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;br>It has survived not only five centuries.&lt;/p>
+		&lt;/div>&lt;!-- /.section_heading -->
+		&lt;div class="col-sm-4 col-xs-6 xs-padding">
+			&lt;div class="blog_post">
+				&lt;img src="img/blog-1.jpg" alt="blog-image">
+				&lt;div class="blog_content">
+					&lt;h4>&lt;a href="#">The Ultimate Renters Guide&lt;/a>&lt;/h4>
+					&lt;P>Lorem ipsum dolor sit amet, consectetur adipisicing elit Ea ratione optio.&lt;/P>
+					&lt;span class="post_meta">&lt;a href="">READ MORE&lt;/a>&lt;/span>
+				&lt;/div>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/section>&lt;!-- /.blog_section -->
+</pre>
+
+
+<hr />
+
+<h4 id="portfolio"><strong>7) Sponsor Section</strong> - <a href="#toc">top</a></h4>
+  <br>
+<pre class="brush: html;">
+&lt;div class="sponsor_section bg-grey">
+	&lt;div class="container">
+		&lt;ul id="sponsor_carousel" class="sponsor_items owl-carousel">
+			&lt;li class="sponsor_item">
+				&lt;img src="img/sponsor-1.png" alt="sponsor-image">
+			&lt;/li>
+		&lt;/ul>
+	&lt;/div>
+&lt;/div>&lt;!-- ./sponsor_section -->
+</pre>
+
+<hr />
+
+<h4 id="portfolio"><strong>7) Widget Section</strong> - <a href="#toc">top</a></h4>
+  <br>
+<pre class="brush: html;">
+&lt;section id="subscribe" class="widget_section padding">
+	&lt;div class="container">
+		&lt;div class="col-md-4 col-xs-6 xs-padding">
+			&lt;div class="footer_widget">
+				&lt;h3 class="text-white">Contact information&lt;/h3>
+				&lt;p>ADDRESS: 100 Tenth Avenue, New York City, NY 1001
+				&lt;br>FOR BOOKING: (044) 359 0173&lt;/p>
+				&lt;ul class="widget_social">
+					&lt;li>&lt;a href="#">&lt;i class="social_facebook">&lt;/i>&lt;/a>&lt;/li>
+					&lt;li>&lt;a href="#">&lt;i class="social_twitter">&lt;/i>&lt;/a>&lt;/li>
+					&lt;li>&lt;a href="#">&lt;i class="social_googleplus">&lt;/i>&lt;/a>&lt;/li>
+					&lt;li>&lt;a href="#">&lt;i class="social_instagram">&lt;/i>&lt;/a>&lt;/li>
+					&lt;li>&lt;a href="#">&lt;i class="social_linkedin">&lt;/i>&lt;/a>&lt;/li>
+				&lt;/ul>
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="col-md-4 col-xs-6 xs-padding">
+			&lt;div class="footer_widget">
+				&lt;h3 class="text-white">Opening Hours&lt;/h3>
+				&lt;p>Monday - Friday 11:30AM - 2:00PM &lt;br>Saturday - Sunday 4:30PM - 10:00PM &lt;br>Monday - Friday 5:30PM - 11:00PM&lt;/p>
+
+			&lt;/div>
+		&lt;/div>
+		&lt;div class="col-md-4 col-xs-6 xs-padding">
+			&lt;div class="footer_widget">
+				&lt;h4 class="text-white">Subscribe to our contents&lt;/h4>
+				&lt;div class="subscribe_form">
+					&lt;form action="#" class="subscribe_form">
+						&lt;input type="email" name="email" id="subs-email" class="form_input" placeholder="Email Address...">
+						&lt;button type="submit" class="submit">SUBSCRIBE&lt;/button>
+						&lt;div class="clearfix">&lt;/div>
+						&lt;div id="subscribe-result">
+							&lt;p class="subscription-success">&lt;/p>
+							&lt;p class="subscription-error">&lt;/p>
+						&lt;/div>
+					&lt;/form>
+					&lt;p class="align-left">There are design companies and then there are user experience design professional.&lt;/p>
+				&lt;/div>&lt;!-- Subscribe Form -->
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/section>&lt;!-- /.widget_section -->
+</pre>
+
+<hr />
+
+<h4 id="portfolio"><strong>7) Footer Section</strong> - <a href="#toc">top</a></h4>
+  <br>
+<pre class="brush: html;">
+&lt;footer class="footer_section">
+	&lt;div class="container">
+		&lt;div class="col-xs-6 xs-padding">
+			&lt;div class="copyright">&copy; 2018 Barbershop Powered by DynamicLayers&lt;/div>
+		&lt;/div>
+		&lt;div class="col-xs-6 xs-padding">
+			&lt;ul class="footer_social">
+				&lt;li>&lt;a href="#">Orders&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#">Terms&lt;/a>&lt;/li>
+				&lt;li>&lt;a href="#">Report Problem&lt;/a>&lt;/li>
+			&lt;/ul>
+		&lt;/div>
+	&lt;/div>
+&lt;/footer>&lt;!-- /.footer_section -->
+</pre>
+
+<h4 id="portfolio"><strong>8) Footer Section</strong> - <a href="#toc">top</a></h4>
+  <br>
+
+<p>&nbsp;</p>
+
+	  <hr>
+		<h3 id="cssFiles"><strong>C) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+		 <p>These are the css files:</p>
+		<ol>
+			<li>bootstrap.min.css</li>
+			<li>animate.min.css</li>
+			<li>elegant-font-icons.css</li>
+			<li>elegant-line-icons.css</li>
+			<li>owl.carousel.css</li>
+			<li>main.css </li>
+	        <li>responsive.css</li>
+	  </ol>
+
+
+<p>&nbsp;</p>
+	  <hr>
+
+		<h3 id="javascript"><strong>D) JavaScript</strong> - <a href="#toc">top</a></h3>
+
+		<p>This theme use these Javascript files:</p>
+
+		<ol>
+		  <li>jQuery<br>
+		    jQuery is a Javascript library that greatly reduces the amount of code that you must write. jQuery use these javascript files:
+		    <pre>
+            	bootstrap.min.js
+                smooth-scroll.min.js
+                owl.carousel.min.js
+                jquery.ajaxchimp.min.js
+                jquery-1.12.4.min.js
+                jquery.mb.YTPlayer.min.js
+                owl.carousel.min.js
+                venobox.min.js
+                wow.min.js
+                jquery.counterup.min.js
+                main.js
+            </pre>
+		    You can edit the contact.js files. for setting contact form
+		    <br>
+            <br>
+		  </li>
+	  </ol>
+
+<hr>
+
+		<h3 id="credits"><strong>F) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		<ol>
+			<li><a href="http://getbootstrap.com" target="_blank">Bootstrap 3.3</a></li>
+			<li><a href="http://www.owlcarousel.owlgraphic.com" target="_blank">OWL Carousel</a></li>
+			<li><a href="https://wowjs.uk/" target="_blank">WOW JS</a></li>
+			<li><a href="http://veno.es/venobox/" target="_blank">VenoBox</a></li>
+			<li><a href="https://github.com/cferdinandi/smooth-scroll" target="_blank">Smooth Scroll</a></li>
+			<li><a href="https://github.com/pupunzi/jquery.mb.YTPlayer/wiki" target="_blank">YTPlayer</a></li>
+			<li><a href="http://plugins.jquery.com/ajaxchimp/" target="_blank">AjaxChimp</a></li>
+		</ol>
+	    <p>
+
+    <hr>
+        <h3 id="php"><strong>G) PHP Code Explanation </strong> - <a href="#toc">top</a></h3>
+        <p>There are only one php code for contact page which is contact.php, open this file and change the email and subject on line 24 and line 27.
+         No need to edit other code unless you really want to.
+  <hr>
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist.</p>
+
+	  <p class="append-bottom alt large"><strong>DynamicLayers</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+
+		<hr class="space">
+	</div>
+<!-- end div .container -->
+	<script type="text/javascript" src="syntax-highlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="syntax-highlighter/scripts/shBrushXml.js"></script>
+	<script type="text/javascript" src="syntax-highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="syntax-highlighter/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="syntax-highlighter/scripts/shBrushPhp.js"></script>
+	<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+</body>
+</html>
