@@ -726,215 +726,236 @@ ul.nav > li > a.active{
     color: #fff;
 }
 
-/* ==========================================================================
-    4.0 About Section
-   ========================================================================== */
-.about_section{}
-.about_section h3{}
-.about_content h2{
-    font-size: 36px;
-    line-height: 46px;
-    color: #9e8a78;
-    margin-bottom: 30px;
-}
-.about_content p{
-    margin-bottom: 30px;
-}
-.about_section .about_content{}
-.about_section .about_content img{
-    margin-bottom: 20px;
-}
-.about_section .about_img img{
-    width: 60%;
-    border-radius: 5px;
-    box-shadow: 0px 16px 28px 0px rgba(0, 0, 0, 0.20);
-}
-.about_section .about_img_2{
-    margin: -180px 0 0 270px;
-}
-.about_section .about_img_3{
-    margin: -260px 0 0 40px;
-}
-/*About Style 2
-================*/
-.about_video{
-    position: relative;
-}
-.about_video img{
-    border-radius: 3px;
-    width: 100%;
-}
-
-.play-icon{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.play-icon a{
-    background-color: #fff;
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    text-align: center;
-    border-radius: 50%;
-    color: #9e8a78;
-    font-weight: bold;
-    display: block;
-    transition: all 0.2s ease-in-out;
-     transition: all 0.2s ease-in-out;
-    -webkit-animation: btn-anim 1s linear infinite;
-    animation: btn-anim 1s linear infinite;
-    -webkit-transition: all .5s linear;
-    transition: all .5s linear;
-}
-@keyframes btn-anim {
-    0% {
-        -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1);
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1);
+    /* ==========================================================================
+           4.0 About Section
+          ========================================================================== */
+    .about_section{}
+    .about_section h3{}
+    .about_content h2{
+        font-size: 36px;
+        line-height: 46px;
+        color: #9e8a78;
+        margin-bottom: 30px;
+    }
+    .about_content p{
+        margin-bottom: 30px;
+    }
+    .about_section .about_content{}
+    .about_section .about_content img{
+        margin-bottom: 20px;
+    }
+    .about_section .about_img img{
+        width: 60%;
+        border-radius: 5px;
+        box-shadow: 0px 16px 28px 0px rgba(0, 0, 0, 0.20);
+    }
+    .about_section .about_img_2{
+        margin: -180px 0 0 270px;
+    }
+    .about_section .about_img_3{
+        margin: -260px 0 0 40px;
+    }
+    /*About Style 2
+    ================*/
+    .about_video{
+        position: relative;
+    }
+    .about_video img{
+        border-radius: 3px;
+        width: 100%;
     }
 
-    100% {
-        -webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0);
-        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0);
+    .play-icon{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 0;
     }
-}
-/* ==========================================================================
-  Why Us Section
-   ========================================================================== */
-.why_section{
-    position: relative;
-}
-.why_img{
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.why_img .img{
-    width: 100%;
-    height: 100%;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center center;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.why_section {}
-.why_contant {
-    padding: 100px 0;
-    padding-left: 15px;
-}
+    .play-icon a{
+        background-color: #fff;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        border-radius: 50%;
+        color: #9e8a78;
+        font-weight: bold;
+        display: block;
+        transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        -webkit-animation: btn-anim 1s linear infinite;
+        animation: btn-anim 1s linear infinite;
+        -webkit-transition: all .5s linear;
+        transition: all .5s linear;
+    }
+    @keyframes btn-anim {
+        0% {
+            -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1);
+        }
 
-why_section ul.list li{
-    display: block;
-    color: #777;
-    font-size: 16px;
-    padding-left: 35px;
-    position: relative;
-    margin-bottom: 20px;
-}
-why_section ul.list li:before{
-    background-color: #9e8a78;
-    font-family: 'ElegantIcons';
-    content:  "\4e";
-    color: #fff;
-    font-size: 12px;
-    line-height: 25px;
-    text-align: center;
-    font-family: 'ElegantIcons';
-    content: "\4e";
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-/* ==========================================================================
-   9.0 Service Section
-   ========================================================================== */
-.service_section{}
-.service_content img{
-    width: 100%;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-.service_content h3{
-    font-size: 20px;
-}
-.service_content img:hover{
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1);
-}
-.service_items .col-xs-6{
-    padding: 15px;
-}
-.service_item{
-    position: relative;
-    overflow: hidden;
-    color: #ddd;
-    border-radius: 10px;
-}
-.service_item h3{
-    color: #fff;
-}
-.service_item img{
-    transition: all 0.9s ease-in-out;
-    width: 100%;
-}
-.service_item:hover img{
-    -webkit-filter: grayscale(1);
-	filter: grayscale(1);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    transition: all 1s ease-in-out;
-}
-.service_item .post_info{
-    width: 100%;
-    height: auto;
-    display: block;
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-}
-.service_item .post_info a:hover{
-    text-decoration: underline;
-    opacity: 1;
-}
-/*Service Style 2
-==================*/
-.service_box{
-    background-color: #fff;
-    padding: 40px 30px;
-    text-align: center;
-    cursor: pointer;
-    -webkit-box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
-    box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
-    height: 100%;
-    flex: 1;
-}
+        100% {
+            -webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0);
+        }
+    }
 
-.service_box i{
-    font-size: 50px;
-    margin-bottom: 20px;
-    color: #9e8a78;
-    display: block;
-}
 
-.service_box h3{
-    font-size: 22px;
-}
+    /*About Style 2
+    ================*/
+    .about_video{
+        position: relative;
+    }
+    .about_video img{
+        border-radius: 3px;
+        width: 100%;
+    }
 
-.service_box p{
-    text-align: justify;
-}
+    .play-icon{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .play-icon a{
+        background-color: #fff;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        border-radius: 50%;
+        color: #9e8a78;
+        font-weight: bold;
+        display: block;
+        transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        -webkit-animation: btn-anim 1s linear infinite;
+        animation: btn-anim 1s linear infinite;
+        -webkit-transition: all .5s linear;
+        transition: all .5s linear;
+    }
+    @keyframes btn-anim {
+        0% {
+            -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1);
+        }
+
+        100% {
+            -webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0);
+        }
+    }
+    /* ==========================================================================
+       9.0 Service Section
+       ========================================================================== */
+    .service_section{}
+    .service_content img{
+        width: 100%;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+    .service_content h3{
+        font-size: 20px;
+    }
+    .service_content img:hover{
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+    }
+    .service_items .col-xs-6{
+        padding: 15px;
+    }
+    .service_item{
+        position: relative;
+        overflow: hidden;
+        color: #ddd;
+        border-radius: 10px;
+    }
+    .service_item h3{
+        color: #fff;
+    }
+    .service_item img{
+        transition: all 0.9s ease-in-out;
+        width: 100%;
+    }
+    .service_item:hover img{
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        transition: all 1s ease-in-out;
+    }
+    .service_item .post_info{
+        width: 100%;
+        height: auto;
+        display: block;
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+    }
+    .service_item .post_info a:hover{
+        text-decoration: underline;
+        opacity: 1;
+    }
+    /*Service Style 2
+    ==================*/
+    .service_box {
+        background-color: #fff;
+        padding: 40px 30px;
+        text-align: center;
+        cursor: pointer;
+        -webkit-box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
+        box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
+        flex: 1 1 calc(33.333% - 20px); /* Adjust width and spacing */
+        margin: 10px; /* Add margin for spacing between boxes */
+        box-sizing: border-box;
+    }
+
+    /* Ensure the container uses flexbox layout */
+    .service_section .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /*.service_box img{*/
+    /*    font-size: 50px;*/
+    /*    margin-bottom: 20px;*/
+    /*    color: #9e8a78;*/
+    /*    display: block;*/
+    /*}*/
+
+
+    /*.service_box {*/
+    /*    width: 100%; !* Set the width to 100% to make the boxes wider *!*/
+    /*    max-width: 300px; !* Optionally, set a maximum width to avoid excessive width on larger screens *!*/
+    /*    margin: 0 auto; !* Center the service boxes horizontally *!*/
+    /*    padding: 20px; !* Add padding to the service boxes *!*/
+    /*    border-radius: 5px; !* Add border-radius for rounded corners *!*/
+    /*    background-color: #fff; !* Background color for the service boxes *!*/
+    /*    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); !* Box shadow for a subtle effect *!*/
+    /*}*/
+
+
+    .service_box img {
+        max-width: 25%; /* Set the maximum width of the image to 100% of its container */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure image is treated as a block element */
+        /*margin-bottom: 10px; !* Optional: add some space below the image *!*/
+        margin: 0 auto;
+        padding-bottom: 5%;
+    }
+
+    .service_box h3{
+        font-size: 22px;
+    }
 /* ==========================================================================
    Book Section
    ========================================================================== */
