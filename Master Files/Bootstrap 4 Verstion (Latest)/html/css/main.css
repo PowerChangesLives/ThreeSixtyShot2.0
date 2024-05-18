@@ -929,6 +929,9 @@ ul.nav > li > a.active{
         justify-content: center;
         flex: 1;
     }
+    .service_box1 p{
+        text-align: justify;
+    }
 
     /* Ensure the container uses flexbox layout */
     .service_section .container {
