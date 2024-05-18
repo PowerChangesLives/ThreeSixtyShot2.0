@@ -346,8 +346,8 @@ body.loaded #preloader{
 }
 .heading-line{
     margin-top: 20px;
-    height: 10px;
-    background: url(../img/heading-line.png) center center no-repeat;
+    height: 50px;
+    background: url(../img360/small_regular_camera.png)  center center no-repeat;
     position: relative;
 }
 /* Transition Effect */
