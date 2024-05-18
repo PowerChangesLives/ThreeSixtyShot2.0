@@ -917,15 +917,23 @@ why_section ul.list li:before{
     cursor: pointer;
     -webkit-box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
     box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
+    height: 100%;
+    flex: 1;
 }
+
 .service_box i{
     font-size: 50px;
     margin-bottom: 20px;
     color: #9e8a78;
     display: block;
 }
+
 .service_box h3{
     font-size: 22px;
+}
+
+.service_box p{
+    text-align: justify;
 }
 /* ==========================================================================
    Book Section
@@ -1301,7 +1309,7 @@ select.form-control:not([size]):not([multiple]){
    Call To Action Section
    ========================================================================== */
 .cta_section{
-    background-image: url(../img/cta.jpg);
+    background-image: url(https://github.com/PowerChangesLives/ThreeSixtyShot/blob/all_team_branch/images/Red%20Carpet%20CTA.jpeg?raw=true);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 0 0;
@@ -2099,7 +2107,7 @@ blockquote span{
    ========================================================================== */
 /*Page Header */
 .page_header{
-    background-image: url(../img/page-header.jpg);
+    background-image: url(https://github.com/PowerChangesLives/ThreeSixtyShot/blob/all_team_branch/images/special-event-hero.jpeg?raw=true);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -2111,6 +2119,53 @@ blockquote span{
 }
 .page_header .section_heading{}
 .page_header .section_heading h2{
+    color: #fff;
+
+}.page_header1{
+    background-image: url(https://github.com/PowerChangesLives/ThreeSixtyShot/blob/all_team_branch/images/wedding%20event.jpeg?raw=true);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+}
+.page_header1 .section_heading{}
+.page_header1 .section_heading h2{
+    color: #fff;
+}
+
+.page_header2{
+    background-image: url(https://github.com/PowerChangesLives/ThreeSixtyShot/blob/all_team_branch/images/Corpo%20event.jpeg?raw=true);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+}
+.page_header2 .section_heading{}
+.page_header2 .section_heading h2{
+    color: #fff;
+}
+
+.page_header3{
+    background-image: url(https://github.com/PowerChangesLives/ThreeSixtyShot/blob/all_team_branch/images/Holiday%20rental.jpeg?raw=true);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+}
+.page_header3 .section_heading{}
+.page_header3 .section_heading h2{
     color: #fff;
 }
 .page_content_section{
