@@ -1432,15 +1432,22 @@ select.form-control:not([size]):not([multiple]){
         justify-content: space-between;
         margin-bottom: 5px;
     }
+    .row1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
 
-    section {
+    /*section {
         flex: 1;
         margin: 15px;
         padding: 20px;
         border: 1px solid #ccc;
         background-color: #fff;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+    }*/
+
 
     h2{
         text-align: center;
