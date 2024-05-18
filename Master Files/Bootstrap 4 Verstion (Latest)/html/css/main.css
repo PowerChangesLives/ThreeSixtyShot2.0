@@ -929,6 +929,16 @@ ul.nav > li > a.active{
         justify-content: center;
         flex: 1;
     }
+
+    .service_box1 img {
+        max-width: 60%; /* Set the maximum width of the image to 100% of its container */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure image is treated as a block element */
+        /*margin-bottom: 10px; !* Optional: add some space below the image *!*/
+        margin: 0 auto;
+        padding-bottom: 5%;
+    }
+
     .service_box1 p{
         text-align: justify;
     }
