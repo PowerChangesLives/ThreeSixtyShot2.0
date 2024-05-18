@@ -359,18 +359,20 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
 /* ==========================================================================
    Header Section
    ========================================================================== */
-.header-section{
-    background-color: #222227;
-    width: 100%;
-    height: 90px;
-    z-index: 999;
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
+    .header-section {
+        background-color: #222227;
+        width: 100%;
+        height: 90px;
+        z-index: 999;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Ensure the content is aligned to the start (left) */
+    }
+
 .navbar-fixed-top.header-section{
     background-color: #222227;
     -moz-box-shadow: 0 2px 5px rgba(16,16,16,.08);
@@ -397,16 +399,41 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
 .header-section{
     transition: all 0.3s ease-in-out;
 }
-.navbar{
-    border: medium none;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    -ms-border-radius: 0;
-    border-radius: 0;
-    margin: 0;
-    position: relative;
-    padding: 0;
-}
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Ensure space between the logo and menu items */
+        width: 100%;
+        padding: 0;
+    }
+
+    .header-section .container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Align items to the start (left) */
+        width: 100%;
+        padding: 0px 15px;
+    }
+
+
+    /* Adjust the container to fit the content -- THIS CONTAINER HOLDS THE LOGO IMAGE IN THE HEADER */
+    .header-section .navbar-brand {
+        display: flex; /* Use flex to align the image properly */
+        align-items: center; /* Center align the image vertically */
+        max-width: 20%; /* Adjust max-width to your requirement */
+    }
+    /* Adjust the image size   --- LOGO IMAGE IN THE HEADER*/
+    .header-section .navbar-brand .navbar-logo-img {
+        width: 100%; /* Use full width of the container */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 300PX; /* Ensure the image does not grow too large */
+        margin-left: 0; /* Ensure no margin on the left */
+    }
+
+
+
+
+
 .navbar-header {
     padding: 17px 0;
 }
