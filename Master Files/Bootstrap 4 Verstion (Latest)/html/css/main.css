@@ -918,6 +918,31 @@ ul.nav > li > a.active{
         box-sizing: border-box;
     }
 
+    .service_box1{
+        background-color: #fff;
+        padding: 40px 30px;
+        text-align: center;
+        cursor: pointer;
+        -webkit-box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
+        box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
+        height: 100%;
+        justify-content: center;
+        flex: 1;
+    }
+
+    .service_box1 img {
+        max-width: 60%; /* Set the maximum width of the image to 100% of its container */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure image is treated as a block element */
+        /*margin-bottom: 10px; !* Optional: add some space below the image *!*/
+        margin: 0 auto;
+        padding-bottom: 5%;
+    }
+
+    .service_box1 p{
+        text-align: justify;
+    }
+
     /* Ensure the container uses flexbox layout */
     .service_section .container {
         display: flex;
