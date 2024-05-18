@@ -1,0 +1,21 @@
+.custom-list {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-list li {
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.custom-list li i {
+    margin-right: 10px;
+}
+
+.custom-list li:hover {
+    background-color: #e0e0e0;
+}
