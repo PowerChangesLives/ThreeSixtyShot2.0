@@ -1017,7 +1017,7 @@ ul.nav > li > a.active{
     position: relative;
 }
 .book_bg{
-    background-image: url(../img360/EventsPages/reservationpage.jpg);
+    background-image: url(../img360/EventsPages/360boothreservation.jpg);
     background-repeat: no-repeat;
     background-position: center left;
     position: absolute;
@@ -1025,6 +1025,7 @@ ul.nav > li > a.active{
     height: 100%;
     left: 0;
     top: 0;
+    background-size: cover;
 }
 .map_pattern{
     background-image: url(../img/satellite-map.png);
