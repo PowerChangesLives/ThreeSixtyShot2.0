@@ -92,8 +92,8 @@
 		<section class="page_header d-flex align-items-center">
 		    <div class="container">
 		        <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-                   <h3>Trendy Salon &amp; Spa</h3>
-                   <h2>Make Appointment</h2>
+                   <h3>ThreeSixtyShot</h3>
+                   <h2>Make a Reservation</h2>
                    <div class="heading-line"></div>
                 </div>
 		    </div>
@@ -102,37 +102,37 @@
         <section class="service_section bg-grey padding">
             <div class="container">
                 <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-                   <h3>Trendy Salon &amp; Spa</h3>
+                   <h3>ThreeSixtyShot</h3>
                    <h2>Our Services</h2>
                    <div class="heading-line"></div>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="200ms">
-                        <div class="service_box">
-                            <i class="bs bs-scissors-1"></i>
-                            <h3>Haircut Styles</h3>
-                            <p>Barber is a person whose occupation is mainly to cut dress style.</p>
+                        <div class="service_box1">
+                            <i class="holiday"><img src="img360/EventsPages/confetti.png" alt=""></i>
+                            <h3>Holidays</h3>
+                            <p>Let ThreeSixtyShot make your Holidays a memorable experience with our 360 photos.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="300ms">
-                        <div class="service_box">
-                            <i class="bs bs-razor-2"></i>
-                            <h3>Beard Triming</h3>
-                            <p>Barber is a person whose occupation is mainly to cut dress style.</p>
+                        <div class="service_box1">
+                            <i class="wedding6"><img src="img360/weddingbells.png" alt=""></i>
+                            <h3>Weddings</h3>
+                            <p>Make your wedding a memorable event with our immersive 360 photos. </p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
-                        <div class="service_box">
-                            <i class="bs bs-brush"></i>
-                            <h3>Smooth Shave</h3>
-                            <p>Barber is a person whose occupation is mainly to cut dress style.</p>
+                        <div class="service_box1">
+                            <i class="holiday"><img src="img360/EventsPages/any_occasion.png" alt=""></i>
+                            <h3>Special Events</h3>
+                            <p>Don't forget to book us for your special event and make it unforgettable.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="500ms">
-                        <div class="service_box">
-                            <i class="bs bs-hairbrush-1"></i>
-                            <h3>Face Masking</h3>
-                            <p>Barber is a person whose occupation is mainly to cut dress style.</p>
+                        <div class="service_box1">
+                            <i class="corporate"><img src="img360/share_images.png" alt=""></i>
+                            <h3>Corporate</h3>
+                            <p>Book us for your corporate event to add some style and class to your event</p>
                         </div>
                     </div>
                 </div>
@@ -147,8 +147,8 @@
                     <div class="col-md-6 offset-md-6">
                        <form action="appointment.php" method="post" id="appointment_form" class="form-horizontal appointment_form">
                            <div class="book_content">
-                                <h2>Make an appointment</h2>
-                                <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave men's and boys hair.</p>
+                                <h2>Make a Reservation</h2>
+                                <p>At ThreeSixtyShot, we prioritize professionalism, efficiency, and personalized service.</p>
                            </div>
                             <div class="form-group row">
                                 <div class="col-md-6 padding-10">
@@ -163,28 +163,25 @@
                                     <input type="text" id="app_phone" name="app_phone" class="form-control" placeholder="Your Phone No" required>
                                 </div>
                                 <div class="col-md-6 padding-10">
-                                    <input type="text" id="app_free_time" name="app_free_time" class="form-control" placeholder="Your Free Time" required>
+                                    <input type="text" id="specialrequest" name="specialrequest" class="form-control" placeholder="Special Request">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-6 padding-10">
                                     <select class="form-control" id="app_services" name="app_services">
-                                      <option>Services</option>
-                                      <option>Hair Styling</option>
-                                      <option>Shaving</option>
-                                      <option>Face Mask</option>
-                                      <option>Hair Wash</option>
-                                      <option>Beard Triming</option>
+                                      <option>Package</option>
+                                      <option>Basic Package</option>
+                                      <option>Premium Package</option>
+                                      <option>Corporate Package</option>
                                     </select>
                                 </div>
+                            </div>
+                            <div class="form-group row">
                                 <div class="col-md-6 padding-10">
-                                    <select class="form-control" id="app_barbers" name="app_barbers">
-                                      <option>Choose Barbers</option>
-                                      <option>Michel Brown</option>
-                                      <option>Jonathan Smith</option>
-                                      <option>Jack Tosan</option>
-                                      <option>Martin Lane</option>
-                                    </select>
+                                    <input type="date" id="app_free_time" name="app_free_time" min="2024-05-18" max="2025-05-18" class="form-control" placeholder="Your reserve date" required>
+                                </div>
+                                <div class="col-md-6 padding-10">
+                                    <input type="time" id="reservation-time" name="reservation-time" class="form-control" placeholder="your reserve time">
                                 </div>
                             </div>
                             <button id="app_submit" class="default_btn" type="submit">Make Appointment</button>
@@ -198,59 +195,88 @@
         <section id="team" class="team_section bd-bottom padding">
             <div class="container">
                 <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-                   <h3>Trendy Salon &amp; Spa</h3>
-                   <h2>Our Barbers</h2>
+                   <h3>ThreeSixtyShot</h3>
+                   <h2>Our Packages</h2>
                    <div class="heading-line"></div>
                 </div>
-                <ul class="team_members row">
-                    <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="200ms">
-                        <div class="team_member">
-                            <img src="img/team-1.jpg" alt="Team Member">
-                            <div class="overlay">
-                                <h3>Kyle Frederick</h3>
-                                <p>WEB DESIGNER</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="300ms">
-                        <div class="team_member">
-                            <img src="img/team-2.jpg" alt="Team Member">
-                            <div class="overlay">
-                                <h3>José Carpio</h3>
-                                <p>WORDPRESS DEVELOPER</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
-                        <div class="team_member">
-                            <img src="img/team-3.jpg" alt="Team Member">
-                            <div class="overlay">
-                                <h3>Michel Ibáñez</h3>
-                                <p>ONLINE MARKETER</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-3 col-md-6 sm-padding wow fadeInUp" data-wow-delay="500ms">
-                        <div class="team_member">
-                            <img src="img/team-4.jpg" alt="Team Member">
-                            <div class="overlay">
-                                <h3>Adam Castellon</h3>
-                                <p>JAVA SPECIALIST</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul><!-- /.team_members -->
+                <ul class="team_members row1">
+                    <div class="pricing-plan">
+                        <h2>Basic Package</h2>
+                        <p class="price">$650</p>
+                        <ul style="text-align:center">
+                            <li>3 Hours of 360 Photo Booth Experience</li>
+                            <li>2 Photo Booth Attendants For Your Event</li>
+                            <li>Boomerang and Slow-Motion Videos</li>
+                            <li>100 CM Platform Holds 3-4 People</li>
+                            <li>Studio Lighting</li>
+                            <li>Social Sharing/Downloading</li>
+                            <li>Online Gallery of All 360 Videos From Your Event</li>
+                            <!-- Add more features as needed -->
+                        </ul>
+                        <br>
+                        <a href="reserve.html">
+                            <button>Select Package</button>
+                        </a>
+                    </div>
+                    <div class="pricing-plan">
+                        <h2>Premium Package</h2>
+                        <p class="price">$850</p>
+                        <ul style="text-align:center">
+                            <li>4 Hours of 360 Photo Booth Experience</li>
+                            <li>2 Photo Booth Attendants For Your Event</li>
+                            <li>Boomerang and Slow-Motion Videos</li>
+                            <li>100 CM Platform Holds 3-4 People</li>
+                            <li>Studio Lighting</li>
+                            <li>Social Sharing/Downloading</li>
+                            <li>Online Gallery of All 360 Videos From Your Event</li>
+                            <!-- Add more features as needed -->
+                        </ul>
+                        <br>
+                        <a href="reserve.html">
+                            <button>Select Package</button>
+                        </a>
+                    </div>
+                    <div class="pricing-plan">
+                        <h2>Corporate Package</h2>
+                        <br>
+                        <p class="price" style="font-size: 16px;">*2 Hour Booking Minimum Required</p>
+                        <br>
+                        <ul style="text-align:center">
+                            <li>2 Hours - $575</li>
+                            <li>3 Hours - $750</li>
+                            <li>4 Hours - $925</li>
+                            <li>Each additional hour over 4 hours is $125 an hour</li>
+                            <!-- Add more features as needed -->
+                        </ul>
+                        <br>
+                        <a href="reserve.html">
+                            <button>Select Package</button>
+                        </a>
+                        <br>
+                        <br>
+                        <h2 style="padding-top: 5px;">Add-Ons</h2>
+                        <br>
+                        <ul style="text-align:center">
+                            <li>Props-$50</li>
+                            <li>Extra Time-$100</li>
+                            <!-- Add more features as needed -->
+                        </ul>
+                        <br>
+                        <a href="reserve.html">
+                            <button>Select Package</button>
+                        </a>
+                    </div>
+                </ul>
             </div>
-        </section><!-- /.team_section -->
+        </section>
 
        <section class="cta_section padding">
            <div class="container">
                <div class="display-table">
                    <div class="table-cel">
                        <div class="cta_content align-center wow fadeInUp" data-wow-delay="300ms">
-                           <h2>Making You Look Good <br> Is In Our Haritage.</h2>
-                           <p>Barber is a person whose occupation is mainly to cut dress groom <br>style and shave men's and boys hair.</p>
-                           <a href="#" class="default_btn">Make Appointment</a>
+                           <h2>Making Unforgettable Memories<br> Is Our Business</h2>
+                           <a href="#" class="default_btn">Make A Reservation</a>
                        </div>
                    </div>
                </div>
