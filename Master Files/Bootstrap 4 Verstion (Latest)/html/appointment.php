@@ -16,6 +16,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date = filter_input(INPUT_POST, 'app_free_time', FILTER_SANITIZE_STRING);
     $time = filter_input(INPUT_POST, 'reservation-time', FILTER_SANITIZE_STRING);
 
+    echo "Name: " . $name . "\n";
+    echo "Email: " . $email . "\n";
+    echo "Phone: " . $phone . "\n";
+    echo "Request: " . $request . "\n";
+    echo "Type: " . $type . "\n";
+    echo "Date: " . $date . "\n";
+    echo "Time: " . $time . "\n";
+
+
+
     // Check that data was sent to the mailer.
     if (empty($name) or empty($phone) or empty($email) or empty($request) or empty($time) or empty($type)
         or empty($date)or !filter_var($email, FILTER_VALIDATE_EMAIL))  {
@@ -38,9 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail->Port = 587;
 
     $mail->Username = "APIKey";
-    $mail->Password = "SecretKey";
+    $mail->Password = "APISecretKey";
 
-    $message = "Someone used the 'contact us' form:" . "\n\n" .
+    $message = "Someone used the 'reservations' form:" . "\n\n" .
         "Name: " . $name . "\n\n" .
         "Contact phone: " . $phone . "\n\n" .
         "Contact email: " . $email . "\n\n\n\n" .
@@ -55,6 +65,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } catch (\PHPMailer\PHPMailer\Exception $e) {
         // Handle the exception as needed
         echo "An error occurred. Please try again later.";
+        echo $e->getMessage() . "\n";
+        echo $e->getTraceAsString();
     }
 
     try {
@@ -62,6 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } catch (\PHPMailer\PHPMailer\Exception $e) {
         // Handle the exception as needed
         echo "An error occurred. Please try again later.";
+        echo $e->getMessage() . "\n";
+        echo $e->getTraceAsString();
     }
 
     $mail->Subject = "Someone Made a Reservation!";
@@ -72,6 +86,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } catch (\PHPMailer\PHPMailer\Exception $e) {
         // Handle the exception as needed
         echo "An error occurred. Please try again later.";
+        echo $e->getMessage() . "\n";
+        echo $e->getTraceAsString();
     }
 
     //ob_end_flush();
