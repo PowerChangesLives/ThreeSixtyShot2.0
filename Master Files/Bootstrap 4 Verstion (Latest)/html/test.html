@@ -1,31 +1,11 @@
 <header id="header" class="header-section">
-    <div class="container">
-        <nav class="navbar">
-            <a href="#" class="navbar-brand"><img src="img360/images/logo.jpg" alt="Barbershop" class="logo-img"></a>
-            <div class="d-flex menu-wrap align-items-center">
-                <div id="mainmenu" class="mainmenu">
-                    <ul class="nav">
-                        <li><a data-scroll class="nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a></li>
-                        <li><a href="about-us.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="#">Photobooth Rentals</a>
-                            <ul>
-                                <li><a href="holiday.html">Holiday</a></li>
-                                <li><a href="weddings.html">Wedding</a></li>
-                                <li><a href="special-events.html">Special Events</a></li>
-                                <li><a href="corporate.html">Corporate</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="pricing.html">Our Pricing</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="faqs.html">FAQs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="header-btn">
-                    <a href="reserve.html" class="menu-btn">Make A Reservation</a>
-                </div>
-            </div>
-        </nav>
-    </div>
+    <form action="test.php" method="POST" class="subscribe_form">
+        <input type="email" name="email" id="subs-email" class="form_input" placeholder="Email Address..." required>
+        <button type="submit" class="submit" value="Submit">SUBSCRIBE</button>
+        <div class="clearfix"></div>
+        <div id="subscribe-result">
+            <p class="subscription-success"></p>
+            <p class="subscription-error"></p>
+        </div>
+    </form>
 </header> <!--.header-section -->
