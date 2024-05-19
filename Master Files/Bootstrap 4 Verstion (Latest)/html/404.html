@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -142,8 +142,9 @@
                         <div class="footer_widget">
                             <h3>Subscribe to THREESIXTYSHOT</h3>
                             <div class="subscribe_form">
-                                <form action="#" class="subscribe_form">
-                                    <input type="email" name="email" id="subs-email" class="form_input" placeholder="Email Address...">
+                              <!--  <form action="dbConnection.php" method="post" class="subscribe_form"> -->
+                                    <form action="http://localhost:8080/subscribe.php" method="post" class="subscribe_form">
+                                    <input type="email" name="email" id="subs-email" class="form_input" placeholder="Email Address..." required>
                                     <button type="submit" class="submit">SUBSCRIBE</button>
                                     <div class="clearfix"></div>
                                     <div id="subscribe-result">
@@ -151,6 +152,7 @@
                                         <p class="subscription-error"></p>
                                     </div>
                                 </form>
+
                             </div><!-- Subscribe Form -->
                         </div>
                     </div>

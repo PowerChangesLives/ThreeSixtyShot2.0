@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //var_dump("Initializing new PHP mailer at line 33");
     $mail = new PHPMailer(true);
 
-$mail->SMTPDebug = SMTP::DEBUG_SERVER; //Deactivate this line when not debugging. It causes secret info to show in the browser.
+//$mail->SMTPDebug = SMTP::DEBUG_SERVER; //Deactivate this line when not debugging. It causes secret info to show in the browser.
 
 //var_dump("Setting authentication at line 38");
 
@@ -124,8 +124,8 @@ $mail->SMTPDebug = SMTP::DEBUG_SERVER; //Deactivate this line when not debugging
         echo "An error occurred. Please try again later.";
     }
 
-echo "email sent";
-    //header("Location: sent.html");
+//echo "email sent"
+header("Location: sent.html");
 }
 
 ?>
