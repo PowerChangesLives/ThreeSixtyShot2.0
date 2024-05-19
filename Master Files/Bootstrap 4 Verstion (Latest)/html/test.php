@@ -3,7 +3,7 @@
 $host = '127.0.0.1';
 $port = 3306;
 $user = 'root';
-$password = 'java@HOME123!'; // replace with your actual root password
+$password = 'DB_PASSWORD'; // replace with your actual root password
 $dbname = 'wellness_labs_db';
 
 // Create connection
