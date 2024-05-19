@@ -65,8 +65,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } catch (\PHPMailer\PHPMailer\Exception $e) {
         // Handle the exception as needed
         echo "An error occurred. Please try again later.";
-        echo $e->getMessage() . "\n";
-        echo $e->getTraceAsString();
+//        echo $e->getMessage() . "\n";
+//        echo $e->getTraceAsString();
     }
 
     try {
@@ -74,8 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } catch (\PHPMailer\PHPMailer\Exception $e) {
         // Handle the exception as needed
         echo "An error occurred. Please try again later.";
-        echo $e->getMessage() . "\n";
-        echo $e->getTraceAsString();
+//        echo $e->getMessage() . "\n";
+//        echo $e->getTraceAsString();
     }
 
     $mail->Subject = "Someone Made a Reservation!";
@@ -86,12 +86,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } catch (\PHPMailer\PHPMailer\Exception $e) {
         // Handle the exception as needed
         echo "An error occurred. Please try again later.";
-        echo $e->getMessage() . "\n";
-        echo $e->getTraceAsString();
+//        echo $e->getMessage() . "\n";
+//        echo $e->getTraceAsString();
     }
 
     //ob_end_flush();
    // header("Location: sent.html");
+
+    header('Location: sent.html');
     exit; // Ensure script stops execution after header redirect
+
+
 }
 ?>
