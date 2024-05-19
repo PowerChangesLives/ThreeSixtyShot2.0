@@ -1042,6 +1042,11 @@ ul.nav > li > a.active{
 .appointment_form .book_content h2{
     color: #fff;
 }
+
+    .reserve-option {
+        color: black;
+    }
+
 .appointment_form .book_content p{
     color: #999;
 }
@@ -2527,6 +2532,7 @@ blockquote span{
     margin-bottom: 2px;
     box-shadow: none;
     border: 2px solid #eee;
+
 }
 .form-control:focus{
     border-color: #9e8a78;
