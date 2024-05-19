@@ -1,55 +1,81 @@
 <?php
-    // Only process POST reqeusts.
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Get the form fields and remove whitespace.
-        $name = strip_tags(trim($_POST["app_name"]));
-		$name = str_replace(array("\r","\n"),array(" "," "),$name);
-        $email = filter_var(trim($_POST["app_email"]), FILTER_SANITIZE_EMAIL);
-		$phone = strip_tags(trim($_POST["app_phone"]));
-		$phone = str_replace(array("\r","\n"),array(" "," "),$phone);
-		$app_free_time = strip_tags(trim($_POST["app_free_time"]));
-		$app_free_time = str_replace(array("\r","\n"),array(" "," "),$app_free_time);
-		$app_services = strip_tags(trim($_POST["app_services"]));
-		$app_services = str_replace(array("\r","\n"),array(" "," "),$app_services);
-		$app_barbers = strip_tags(trim($_POST["app_barbers"]));
-		$app_barbers = str_replace(array("\r","\n"),array(" "," "),$app_barbers);
+require "../../../vendor/autoload.php";
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 
-        // Check that data was sent to the mailer.
-        if ( empty($name) OR empty($phone) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            // Set a 400 (bad request) response code and exit.
-            http_response_code(400);
-            echo "Oops! There was a problem with your submission. Please complete the form and try again.";
-            exit;
-        }
+// Only process POST requests.
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the form fields and remove whitespace.
+    $name = strip_tags(trim($_POST["app_name"]));
+    $name = str_replace(array("\r", "\n"), array(" ", " "), $name);
+    $email = filter_var(trim($_POST["app_email"]), FILTER_SANITIZE_EMAIL);
+    $phone = strip_tags(trim($_POST["app_phone"]));
+    $phone = str_replace(array("\r", "\n"), array(" ", " "), $phone);
+    $request = strip_tags(trim($_POST["special_request"]), FILTER_SANITIZE_STRING);
+    $type = filter_input(INPUT_POST, 'app_services', FILTER_SANITIZE_STRING);
+    $date = filter_input(INPUT_POST, 'app_free_time', FILTER_SANITIZE_STRING);
+    $time = filter_input(INPUT_POST, 'reservation-time', FILTER_SANITIZE_STRING);
 
-        // Update this to your desired email address.
-        $recipient = "info@wowthemez.com";
-		$subject = "Appointment completed!";
+    // Check that data was sent to the mailer.
+    if (empty($name) or empty($phone) or empty($email) or empty($request) or empty($time) or empty($type)
+        or empty($date)or !filter_var($email, FILTER_VALIDATE_EMAIL))  {
 
-        // Email content.
-        $email_content = "Name: $name\n";
-        $email_content .= "Email: $email\n";
-        $email_content .= "Phone: $phone\n\n";
-        $email_content .= "Free Time: $app_free_time\n\n\n";
-        $email_content .= "Services: $app_services\n\n\n\n";
-        $email_content .= "Barber: $app_barbers\n\n\n\n\n\n";
-
-        // Email headers.
-        $email_headers = "From: $name <$email>\r\nReply-to: <$email>";
-
-        // Send the email.
-        if (mail($recipient, $subject, $email_content, $email_headers)) {
-            // Set a 200 (okay) response code.
-            http_response_code(200);
-            echo "Thank You! Your appointment has been completed.";
-        } else {
-            // Set a 500 (internal server error) response code.
-            http_response_code(500);
-            echo "Oops! Something went wrong and we couldn't complete appointment.";
-        }
-
-    } else {
-        // Not a POST request, set a 403 (forbidden) response code.
-        http_response_code(403);
-        echo "There was a problem with your submission, please try again.";
+        // Set a 400 (bad request) response code and exit.
+        http_response_code(400);
+        //echo "Oops! There was a problem with your submission. Please complete the form and try again.";
+        exit;
     }
+
+    $mail = new PHPMailer(true);
+
+    //$mail->SMTPDebug = SMTP::DEBUG_SERVER; //Deactivate this line when not debugging. It causes secret info to show in the browser.
+
+    $mail->isSMTP();
+    $mail->SMTPAuth = true;
+
+    $mail->Host = "in-v3.mailjet.com";
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+
+    $mail->Username = "APIKey";
+    $mail->Password = "SecretKey";
+
+    $message = "Someone used the 'contact us' form:" . "\n\n" .
+        "Name: " . $name . "\n\n" .
+        "Contact phone: " . $phone . "\n\n" .
+        "Contact email: " . $email . "\n\n\n\n" .
+
+        "Date: " . $date . "\n\n" .
+        "Time: " . $time . "\n\n" .
+        "Type: " . $type . "\n\n" .
+        "Message from Contact: " . $request;
+
+    try {
+        $mail->setFrom("info@threesixtyshot.com", $name);
+    } catch (\PHPMailer\PHPMailer\Exception $e) {
+        // Handle the exception as needed
+        echo "An error occurred. Please try again later.";
+    }
+
+    try {
+        $mail->addAddress("info@threesixtyshot.com", "Contact from" . " " . $name);
+    } catch (\PHPMailer\PHPMailer\Exception $e) {
+        // Handle the exception as needed
+        echo "An error occurred. Please try again later.";
+    }
+
+    $mail->Subject = "Someone Made a Reservation!";
+    $mail->Body = $message;
+
+    try {
+        $mail->send();
+    } catch (\PHPMailer\PHPMailer\Exception $e) {
+        // Handle the exception as needed
+        echo "An error occurred. Please try again later.";
+    }
+
+    //ob_end_flush();
+    header("Location: sent.html");
+    exit; // Ensure script stops execution after header redirect
+}
+?>
