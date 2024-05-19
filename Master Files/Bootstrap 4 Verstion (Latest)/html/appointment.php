@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     //ob_end_flush();
-    header("Location: sent.html");
+   // header("Location: sent.html");
     exit; // Ensure script stops execution after header redirect
 }
 ?>
