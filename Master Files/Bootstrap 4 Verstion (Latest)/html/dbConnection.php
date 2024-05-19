@@ -1,13 +1,13 @@
 <?php
 // Database connection details
-$host = '127.0.0.1';
-$port = 3306;
-$user = 'root';
-$password = 'DB_PASSWORD'; // replace with your actual root password
-$dbname = 'wellness_labs_db';
+$host = 'unclaimedfinancecom.ipagemysql.com';
+//$port = 3306;
+$user = '3sixtyshot_com';
+$password = 'PASSWORD'; // replace with your actual root password
+$dbname = 'threesixtyshot_db05182024';
 
 // Create connection
-$conn = new mysqli($host, $user, $password, $dbname, $port);
+$conn = new mysqli($host, $user, $password, $dbname);//PORT WENT IN THE COSTRUCTOR FOR LOCAL TESTING.
 
 // Check connection
 if ($conn->connect_error) {
@@ -33,13 +33,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Execute the query
         if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
+            //echo "New record created successfully";
+            header('Location: sent.html');
+            exit;
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
     } else {
         echo "Invalid email format";
     }
+
+    header();
 }
 
 // Close the connection
