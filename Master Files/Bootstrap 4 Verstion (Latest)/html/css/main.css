@@ -2235,6 +2235,31 @@ blockquote span{
     -webkit-transform: scale(0.9);
     transform: scale(0.9)
 }
+/* ==========================================================================
+   12.0 Sponsor Section about
+   ========================================================================== */
+
+.sponsor_section_about{
+    padding: 60px 0;
+}
+.sponsor_section_about .sponsor_items_about{}
+.sponsor_section_about .sponsor_item_about img{
+    width: 100%;
+}
+.sponsor_section_about .sponsor_items_about li:hover img{
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9)
+}
+
+.sponsor_items_about img{
+    height: 150px;
+    width: 150px;
+}
+
+.padding-about{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 
 /* ==========================================================================
    12.0 Footer widget Section
