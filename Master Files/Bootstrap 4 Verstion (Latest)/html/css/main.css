@@ -1010,9 +1010,27 @@ ul.nav > li > a.active{
         font-size: 22px;
     }
 /* ==========================================================================
-   Book Section
+  Reservation Book Section
    ========================================================================== */
-.book_section{
+
+    /* styles.css */
+
+    /* Style for Add Props checkbox */
+    .add-props {
+        margin-right: 5px;
+        border: 1px solid #000;
+    }
+
+    /* Style for Add Hours dropdown */
+    .add-hours {
+        margin-left: 5px;
+        border: 1px solid #000;
+        padding: 5px; /* Optional: Add padding for better appearance */
+        width: 100px; /* Optional: Set width for consistent size */
+    }
+
+
+    .book_section{
     background-color: #222227;
     position: relative;
 }

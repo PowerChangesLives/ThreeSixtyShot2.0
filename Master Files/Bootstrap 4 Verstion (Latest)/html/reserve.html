@@ -139,6 +139,8 @@
             </div>
         </section><!--/. service_section -->
 
+
+
         <section class="book_section padding">
             <div class="book_bg"></div>
             <div class="map_pattern"></div>
@@ -192,83 +194,156 @@
             </div>
         </section><!-- /.book_section -->
 
+
         <section id="team" class="team_section bd-bottom padding">
             <div class="container">
                 <div class="section_heading text-center mb-40 wow fadeInUp" data-wow-delay="300ms">
-                   <h3>ThreeSixtyShot</h3>
-                   <h2>Our Packages</h2>
-                   <div class="heading-line"></div>
+                    <h3>ThreeSixtyShot</h3>
+                    <h2>Our Packages</h2>
+                    <div class="heading-line"></div>
                 </div>
-                <ul class="team_members row1">
-                    <div class="pricing-plan">
-                        <h2>Basic Package</h2>
-                        <p class="price">$650</p>
-                        <ul style="text-align:center">
-                            <li>3 Hours of 360 Photo Booth Experience</li>
-                            <li>2 Photo Booth Attendants For Your Event</li>
-                            <li>Boomerang and Slow-Motion Videos</li>
-                            <li>100 CM Platform Holds 3-4 People</li>
-                            <li>Studio Lighting</li>
-                            <li>Social Sharing/Downloading</li>
-                            <li>Online Gallery of All 360 Videos From Your Event</li>
-                            <!-- Add more features as needed -->
-                        </ul>
-                        <br>
-                        <a href="reserve.html">
-                            <button id="basic-package-selector-btn" name="basic-package-selector-btn">Select Package</button>
-                        </a>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="pricing-plan">
+                            <form action="reserve.html" method="post">
+                                <h2>Basic Package</h2>
+                                <p class="price">$650</p>
+                                <ul style="text-align:center">
+                                    <li>3 Hours of 360 Photo Booth Experience</li>
+                                    <li>2 Photo Booth Attendants For Your Event</li>
+                                    <li>Boomerang and Slow-Motion Videos</li>
+                                    <li>100 CM Platform Holds 3-4 People</li>
+                                    <li>Studio Lighting</li>
+                                    <li>Social Sharing/Downloading</li>
+                                    <li>Online Gallery of All 360 Videos From Your Event</li>
+                                </ul>
+                                <div style="text-align:center; display: flex; flex-direction: column; align-items: center;">
+                                    <label for="basic-add-props" style="display: flex; align-items: center;">
+                                        <input type="checkbox" class="basic-add-props" id="basic-add-props" name="basic-add-props" style="margin-right: 5px; border: 1px solid #000;">
+                                        Add Props
+                                    </label>
+                                    <br>
+                                    <label for="basic-add-hours" style="display: flex; align-items: center;">
+                                        Add Hours
+                                        <select id="basic-add-hours" class="basic-add-hours" name="basic-add-hours" style="margin-left: 5px; border: 1px solid #000;">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <br>
+                                <button type="submit" id="basic-package-selector-btn" name="basic-package-selector-btn">Select Package</button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="pricing-plan">
-                        <h2>Premium Package</h2>
-                        <p class="price">$850</p>
-                        <ul style="text-align:center">
-                            <li>4 Hours of 360 Photo Booth Experience</li>
-                            <li>2 Photo Booth Attendants For Your Event</li>
-                            <li>Boomerang and Slow-Motion Videos</li>
-                            <li>100 CM Platform Holds 3-4 People</li>
-                            <li>Studio Lighting</li>
-                            <li>Social Sharing/Downloading</li>
-                            <li>Online Gallery of All 360 Videos From Your Event</li>
-                            <!-- Add more features as needed -->
-                        </ul>
-                        <br>
-                        <a href="reserve.html">
-                            <button id="premium-package-selector-btn" name="premium-package-selector-btn">Select Package</button>
-                        </a>
+
+                    <div class="col-md-4">
+                        <div class="pricing-plan">
+                            <h2>Premium Package</h2>
+                            <p class="price">$850</p>
+                            <ul style="text-align:center">
+                                <li>4 Hours of 360 Photo Booth Experience</li>
+                                <li>2 Photo Booth Attendants For Your Event</li>
+                                <li>Boomerang and Slow-Motion Videos</li>
+                                <li>100 CM Platform Holds 3-4 People</li>
+                                <li>Studio Lighting</li>
+                                <li>Social Sharing/Downloading</li>
+                                <li>Online Gallery of All 360 Videos From Your Event</li>
+                            </ul>
+                            <br>
+                            <form action="reserve.html" method="post">
+                                <div style="text-align:center; display: flex; flex-direction: column; align-items: center;">
+                                    <label for="premium-add-props" style="display: flex; align-items: center;">
+                                        <input type="checkbox" class="premium-add-props" id="premium-add-props" name="premium-add-props" style="margin-right: 5px; border: 1px solid #000;">
+                                        Add Props
+                                    </label>
+                                    <br>
+                                    <label for="premium-add-hours" style="display: flex; align-items: center;">
+                                        Add Hours
+                                        <select id="premium-add-hours" class="premium-add-hours" name="premium-add-hours" style="margin-left: 5px; border: 1px solid #000;">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <br>
+                                <button type="submit" id="premium-package-selector-btn" name="premium-package-selector-btn">Select Package</button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="pricing-plan">
-                        <h2>Corporate Package</h2>
-                        <br>
-                        <p class="price" style="font-size: 16px;">*2 Hour Booking Minimum Required</p>
-                        <br>
-                        <ul style="text-align:center">
-                            <li>2 Hours - $575</li>
-                            <li>3 Hours - $750</li>
-                            <li>4 Hours - $925</li>
-                            <li>Each additional hour over 4 hours is $125 an hour</li>
-                            <!-- Add more features as needed -->
-                        </ul>
-                        <br>
-                        <a href="reserve.html">
-                            <button id="corporate-package-selector-btn" name="corporate-package-selector-btn">Select Package</button>
-                        </a>
-                        <br>
-                        <br>
-                        <h2 style="padding-top: 5px;">Add-Ons</h2>
-                        <br>
-                        <ul style="text-align:center">
-                            <li>Props-$50</li>
-                            <li>Extra Time-$100</li>
-                            <!-- Add more features as needed -->
-                        </ul>
-                        <br>
-                        <a href="reserve.html">
-                            <button id="Additions-package-selector-btn" name="corporate-package-selector-btn">Select Package</button>
-                        </a>
+
+
+                    <div class="col-md-4">
+                        <div class="pricing-plan">
+                            <form action="reserve.html" method="post">
+                                <h2>Corporate Package</h2>
+                                <br>
+                                <p>*2 Hour Booking Minimum Required</p>
+
+                                <ul style="text-align:center">
+                                    <li><input type="radio" id="2-hours" name="corporate-hours-2" value="2" checked><label for="2-hours">2 Hours - $575</label></li>
+                                    <li><input type="radio" id="3-hours" name="corporate-hours-3" value="3"><label for="3-hours">3 Hours - $750</label></li>
+                                    <li><input type="radio" id="4-hours" name="corporate-hours-4" value="4"><label for="4-hours">4 Hours - $925</label></li>
+                                    <!-- Additional hours can be added as needed -->
+                                </ul>
+
+                                <br>
+                                <div style="text-align:center; display: flex; flex-direction: column; align-items: center;">
+                                    <label for="corporate-add-props" style="display: flex; align-items: center;">
+                                        <input type="checkbox" class="corporate-add-props" id="corporate-add-props" name="corporate-add-props" style="margin-right: 5px; border: 1px solid #000;">
+                                        Add Props
+                                    </label>
+                                    <br>
+                                    <label for="corporate-add-hours" style="display: flex; align-items: center;">
+                                        Add Hours
+                                        <select id="corporate-add-hours" class="corporate-add-hours" name="corporate-add-hours" style="margin-left: 5px; border: 1px solid #000;">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <br>
+                                <button type="submit" id="corporate-package-selector-btn" name="corporate-package-selector-btn">Select Package</button>
+                            </form>
+
+                        </div>
                     </div>
-                </ul>
+                </div>
             </div>
         </section>
+
+
+
+
+
+
 
        <section class="cta_section padding">
            <div class="container">
