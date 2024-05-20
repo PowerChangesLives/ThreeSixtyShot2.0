@@ -170,9 +170,9 @@
                         <div class="col-md-6 padding-10">
                             <select class="form-control" id="app_services" name="app_services">
                                 <option>Package</option>
-                                <option class="reserve-option" >Basic Package</option>
-                                <option class="reserve-option">Premium Package</option>
-                                <option class="reserve-option">Corporate Package</option>
+                                <option class="reserve-option" id="basic-option-selector" name="basic-option-selector" >Basic Package</option>
+                                <option class="reserve-option" id="premium-package-selector" name="premium-package-selector">Premium Package</option>
+                                <option class="reserve-option" id="corporate-package-selector" name="corporate-package-selector">Corporate Package</option>
                             </select>
                         </div>
                     </div>
@@ -190,7 +190,9 @@
             </div>
         </div>
     </div>
-</section><!-- /.book_section -->
+</section>
+
+<!-- /.book_section -->
 
 <section id="team" class="team_section bd-bottom padding">
     <div class="container">
@@ -215,7 +217,7 @@
                 </ul>
                 <br>
                 <a href="reserve.html">
-                    <button>Select Package</button>
+<!--                    <button id="select-basic-package" name="select-basic-package" class="select-basic-package">Select Package</button>-->
                 </a>
             </div>
             <div class="pricing-plan">
@@ -233,7 +235,7 @@
                 </ul>
                 <br>
                 <a href="reserve.html">
-                    <button>Select Package</button>
+<!--                    <button id="select-premium-package" name="select-premium-package" class="select-premium-package">Select Package</button>-->
                 </a>
             </div>
             <div class="pricing-plan">
@@ -250,7 +252,7 @@
                 </ul>
                 <br>
                 <a href="reserve.html">
-                    <button>Select Package</button>
+<!--                    <button id="select-corporate-package" name="select-corporate-package" class="select-corporate-package">Select Package</button>-->
                 </a>
                 <br>
                 <br>
@@ -263,7 +265,8 @@
                 </ul>
                 <br>
                 <a href="reserve.html">
-                    <button>Select Package</button>
+<!--                    TODO: Work on incorporating additional options-->
+<!--                    <button id="select-additional-options" name="select-additional-options" class="select-additional-options">Select Package</button>-->
                 </a>
             </div>
         </ul>
@@ -390,6 +393,33 @@
 
 <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_up"></i></a>
 
+
+<!--<script>// File: set_reservation_selector.js-->
+
+<!--// Function to set the selected option of the select element-->
+<!--function setSelectedPackage(packageId) {-->
+<!--    const selectElement = document.getElementById('app_services');-->
+<!--    selectElement.value = packageId;-->
+<!--}-->
+
+<!--// Add event listener to the "Select Corporate Package" button-->
+<!--document.getElementById('select-corporate-package').addEventListener('click', function() {-->
+<!--    setSelectedPackage('corporate-package-selector');-->
+<!--});-->
+
+<!--// Add event listener to the "Select Basic Package" button-->
+<!--document.getElementById('select-basic-package').addEventListener('click', function() {-->
+<!--    setSelectedPackage('basic-option-selector');-->
+<!--});-->
+
+<!--// Add event listener to the "Select Premium Package" button-->
+<!--document.getElementById('select-premium-package').addEventListener('click', function() {-->
+<!--    setSelectedPackage('premium-package-selector');-->
+<!--});-->
+<!--</script>-->
+
+<!--The FOLLOWING SCRIPT IS SPECIFIC TO THIS PAGE AND SETS THE RESERVATION OPTION BASED ON THE PACKAGE BUTTON PRESSED-->
+<!--<script src="js/set_reservation_selector.js"></script>-->
 <!-- jQuery Lib -->
 <!--		<script src="js/vendor/jquery-1.12.4.min.js"></script>-->
 <!-- Bootstrap JS -->
