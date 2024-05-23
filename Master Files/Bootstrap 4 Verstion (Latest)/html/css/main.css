@@ -93,6 +93,10 @@ img{
     border: none;
     outline:none;
 }
+.event_dropdown{
+    column-count: 3;
+
+}
 ul{
     display: block;
     list-style: none;
