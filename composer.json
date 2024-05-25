@@ -1,6 +1,9 @@
 {
-    "require": {
-        "phpmailer/phpmailer": "^6.9",
-      "ext-mysqli": "*"
-    }
+  "name": "cyohn/three-sixty-shot2",
+  "type": "project",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "require": {
+    "php": "7.4.10"
+  }
 }
