@@ -3,7 +3,7 @@
 $host = 'unclaimedfinancecom.ipagemysql.com';
 //$port = 3306;
 $user = '3sixtyshot_com';
-$password = 'PASSWORD'; // replace with your actual root password
+$password = 'PA$$W0RD'; // replace with your actual root password
 $dbname = 'threesixtyshot_db05182024';
 
 // Create connection
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate the email
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // SQL query to insert data
-        $sql = "INSERT INTO subscribers (emails) VALUES ('$email')";
+        $sql = "INSERT INTO subscribers (email) VALUES ('$email')";
 
         // Execute the query
         if ($conn->query($sql) === TRUE) {
